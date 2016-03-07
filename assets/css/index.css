@@ -1,0 +1,68 @@
+header{
+  font-size: 3em;
+  color: rgb(179, 213, 159);
+  text-align:center;
+}
+
+.btnBank{
+  padding-left: 75px;
+}
+
+.numSpace{
+  margin:0px -2px 0px -2px;
+  display: inline-block;
+  width: 75px;
+  height: 30px;
+  font-size: 1em;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.space{
+  margin:0px -2px 0px -2px;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  font-size: 4em;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btn{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  border-radius: 2px;
+  border: 3px solid rgb(179, 213, 159);;
+  background: rgb(179, 213, 159);
+  text-align: center;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+#interval{
+  height: 30px;
+  width: 70px;
+  font-size:1em;
+}
+.btn:hover{
+  background:rgb(142, 207, 102);
+  border: 3px solid rgb(179, 213, 159);
+}
+.space:hover{
+  background: rgb(188, 159, 213);
+}
+.selected{
+  background: rgb(179, 145, 207);
+}
+.board{
+  margin: 10px 10px 10px 10px;
+  /*border: 1px #000 solid;*/
+  width: 675px;
+}
+.color1{
+  background: rgb(68, 97, 200);
+}
+.color2{
+  background: rgb(125, 141, 198);
+}

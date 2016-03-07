@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chess</title>
+  <link rel="stylesheet" href="assets/css/MeyerCSSReset.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+<div class="board">
+  <header>Catalan Opening: closed Variation</header><br>
+  <div class="Row" id="r-0">
+    <span class="numSpace" id="NA"></span>
+    <span class="numSpace" id="A">A</span>
+    <span class="numSpace" id="B">B</span>
+    <span class="numSpace" id="C">C</span>
+    <span class="numSpace" id="D">D</span>
+    <span class="numSpace" id="E">E</span>
+    <span class="numSpace" id="F">F</span>
+    <span class="numSpace" id="G">G</span>
+    <span class="numSpace" id="H">H</span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-0">
+    <span class="numSpace" id="1">1</span>
+    <span class="space color1" id="sq-0-0"></span>
+    <span class="space color2" id="sq-0-1"></span>
+    <span class="space color1" id="sq-0-2"></span>
+    <span class="space color2" id="sq-0-3"></span>
+    <span class="space color1 selected" id="sq-0-4">&#9821;</span>
+    <span class="space color2" id="sq-0-5"></span>
+    <span class="space color1" id="sq-0-6"></span>
+    <span class="space color2" id="sq-0-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-1">
+    <span class="numSpace" id="2">2</span>
+    <span class="space color2" id="sq-1-0"></span>
+    <span class="space color1" id="sq-1-1">&#9817;</span>
+    <span class="space color2" id="sq-1-2">&#9821;</span>
+    <span class="space color1" id="sq-1-3"></span>
+    <span class="space color2" id="sq-1-4"></span>
+    <span class="space color1" id="sq-1-5"></span>
+    <span class="space color2" id="sq-1-6"></span>
+    <span class="space color1" id="sq-1-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-2">
+    <span class="numSpace" id="3">3</span>
+    <span class="space color1" id="sq-2-0"></span>
+    <span class="space color2" id="sq-2-1"></span>
+    <span class="space color1" id="sq-2-2"></span>
+    <span class="space color2" id="sq-2-3"></span>
+    <span class="space color1" id="sq-2-4"></span>
+    <span class="space color2" id="sq-2-5"></span>
+    <span class="space color1" id="sq-2-6"></span>
+    <span class="space color2" id="sq-2-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-3">
+    <span class="numSpace" id="4">4</span>
+    <span class="space color2" id="sq-3-0"></span>
+    <span class="space color1" id="sq-3-1"></span>
+    <span class="space color2" id="sq-3-2"></span>
+    <span class="space color1" id="sq-3-3"></span>
+    <span class="space color2" id="sq-3-4"></span>
+    <span class="space color1" id="sq-3-5"></span>
+    <span class="space color2" id="sq-3-6"></span>
+    <span class="space color1" id="sq-3-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-4">
+    <span class="numSpace" id="5">5</span>
+    <span class="space color1" id="sq-4-0"></span>
+    <span class="space color2" id="sq-4-1"></span>
+    <span class="space color1" id="sq-4-2"></span>
+    <span class="space color2" id="sq-4-3"></span>
+    <span class="space color1" id="sq-4-4"></span>
+    <span class="space color2" id="sq-4-5"></span>
+    <span class="space color1" id="sq-4-6"></span>
+    <span class="space color2" id="sq-4-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-5">
+    <span class="numSpace" id="6">6</span>
+    <span class="space color2" id="sq-5-0"></span>
+    <span class="space color1" id="sq-5-1"></span>
+    <span class="space color2" id="sq-5-2"></span>
+    <span class="space color1" id="sq-5-3"></span>
+    <span class="space color2" id="sq-5-4"></span>
+    <span class="space color1" id="sq-5-5"></span>
+    <span class="space color2" id="sq-5-6"></span>
+    <span class="space color1" id="sq-5-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-6">
+    <span class="numSpace" id="7">7</span>
+    <span class="space color1" id="sq-6-0"></span>
+    <span class="space color2" id="sq-6-1"></span>
+    <span class="space color1" id="sq-6-2"></span>
+    <span class="space color2" id="sq-6-3"></span>
+    <span class="space color1" id="sq-6-4"></span>
+    <span class="space color2" id="sq-6-5"></span>
+    <span class="space color1" id="sq-6-6"></span>
+    <span class="space color2" id="sq-6-7"></span>
+  </div><!--end row 1-->
+  <div class="Row" id="r-7">
+    <span class="numSpace" id="8">8</span>
+    <span class="space color2" id="sq-7-0"></span>
+    <span class="space color1" id="sq-7-1"></span>
+    <span class="space color2" id="sq-7-2"></span>
+    <span class="space color1" id="sq-7-3"></span>
+    <span class="space color2" id="sq-7-4"></span>
+    <span class="space color1" id="sq-7-5"></span>
+    <span class="space color2" id="sq-7-6"></span>
+    <span class="space color1" id="sq-7-7"></span>
+  </div><!--end row 1-->
+</div><!--end board-->
+
+<div class="btnBank">
+<span class="btn" id="start">|< Start</span>
+<span class="btn" id="forward">Forward ></span>
+<span class="btn" id="back">< Back</span>
+<span class="btn" id="end">End >|</span>
+<span class="btn" id="play">Auto-Play >></span>
+<input type="text" value ="1" id="interval"></input>
+<br><br>
+
+<select id="openers">
+  <option value="catalan">Catalan Opening: closed Variation</option>
+  <option value="RuyLopez">Ruy Lopez Opening</option>
+  <option value="YRSystem">Yusupov-Rubinstein System</option>
+</select>
+<span class="btn" id="change">Change it!</span>
+</div><!--end btnBank-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="assets/js/index.js"></script>
+</body>
+</html>
