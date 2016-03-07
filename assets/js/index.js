@@ -65,6 +65,9 @@ console.log(gameBoard.join('\n')+'\n\n');
 
 //$("body").html(initialBoard.join('\n')+'\n\n');
 
+
+//this constructor might seem like overkill, especially since im not getting around to using it. but hear me out: it would have been AWESOME. here's how it would have worked:
+//instead of having just the piece html codes in the initialBoard array, I would have had new piece OBJECTS. when a player clicked on a square, we'd ask the piece object in that square what type it was. then using that information, its color, and an array of moves for that piece type to generate a NEW array of possible moves THIS TURN using weird rules like the pawn attack and making sure a piece cant take a piece of its color. THEN we'd color all the squares that piece could move to differently, and when a player clicked on one of THOSE squares we'd use the movePiece function to move the piece to that square. if they clicked a non-specially colored square, we'd do the whole thing over again for a new piece, or de-color all the squares (if he clicked on an empty space).
 function ChessPiece(type, color)//this is my piece constructor
 {
   this.color = color;//either BLACK or WHITE and nothing else.
@@ -125,9 +128,31 @@ function drawBoard()//this redraws all the pieces on the board from the board ar
   }//end row for
 }//end drawboard()
 
-$("#play").click(function(){
-
-})//end play click.
+var play = true;
+var myInterval;
+$("#play").click(function()
+{
+  if(play)//if play is true, play through the active sequence
+  {
+    $("#play").text("pause ||");
+    if(seqCounter >= seqActive.length)//if you're at the end of the sequence, stop.
+    {
+      clearInterval(myInterval);
+      console.log("you're at the end, brah.");
+    }
+    else//otherwise, call the forward function every 'interval' seconds.
+    {
+      myInterval = setInterval(forward, ($("#interval").val()*1000));
+      play = false;
+    }
+  }
+  else//if play is false and we've clicked
+  {
+      $("#play").text("Auto-Play >>")
+      clearInterval(myInterval); // stop playing through.
+      play = true;
+  }
+});//end play click.
 
 var seqActive = CatalanSeq; //seqActive is so we can change out the sequences without overwriting the data in the sequence arrays.
 $("#change").click(function(){
@@ -155,7 +180,10 @@ $("#change").click(function(){
 var seqCounter = 0;
 console.log(seqActive.join('\n')+'\n\n');
 
-$("#forward").click(function(){//when we click the forward button, run the next step in the selected sequence
+$("#forward").click(forward);//when we click the forward button, call the forward function
+
+function forward()//this function advances the active sequence 1 step.
+{
   console.log('inside the forward click!');
 
   if(seqCounter < seqActive.length)//this checks to make sure we're not off the end of the sequence array.
@@ -168,7 +196,7 @@ $("#forward").click(function(){//when we click the forward button, run the next 
     drawBoard();//redraw the board with the new piece locations.
   }
   else {console.log("you're at the end of the sequence bub.");}
-});//end forward click
+};//end forward
 
 $("#back").click(function(){//when we click the back button, run the previous step in the selected sequence
   console.log('inside the back click!');
@@ -200,6 +228,7 @@ $("#back").click(function(){//when we click the back button, run the previous st
       //IMPORTANT! since this is the back button, we feed the 2 sets of xy coordinates into this function BACKWARDS from how they are written in the sequence. instead of moving TO a location, we'll be moving back FROM a location
       seqCounter--;
     }
+
     //gameBoard = initialBoard;
     //for some reason, this does nothing because initialBoard has been changed along with gameBoard. this should not be. its a bug. keeping this in so i can show someone.
 
